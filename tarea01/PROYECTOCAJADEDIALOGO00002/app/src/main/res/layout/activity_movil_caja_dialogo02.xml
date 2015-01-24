@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MovilCajaDialogo02">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="24dp"
+        android:text="SELECCIONE LA MARCA:"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="50dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SELECCIONE LA TALLA:"
+        android:id="@+id/textView"
+        android:layout_below="@+id/btnMarca"
+        android:layout_alignLeft="@+id/txtMarca"
+        android:layout_alignStart="@+id/txtMarca" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtTalla"
+        android:layout_below="@+id/textView"
+        android:layout_alignLeft="@+id/textView"
+        android:layout_alignStart="@+id/textView"
+        android:layout_alignRight="@+id/txtMarca"
+        android:layout_alignEnd="@+id/txtMarca" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtMarca"
+        android:layout_below="@+id/textView1"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignStart="@+id/textView1"
+        android:layout_toLeftOf="@+id/btnMarca"
+        android:layout_toStartOf="@+id/btnMarca" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR"
+        android:id="@+id/btnTalla"
+        android:onClick="BuscarTalla"
+        android:layout_above="@+id/textView2"
+        android:layout_alignLeft="@+id/btnMarca"
+        android:layout_alignStart="@+id/btnMarca"
+        android:layout_alignRight="@+id/btnMarca"
+        android:layout_alignEnd="@+id/btnMarca" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INGRESE EL N° DE PARES VENDIDOS"
+        android:id="@+id/textView2"
+        android:layout_marginTop="32dp"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:layout_below="@+id/txtTalla"
+        android:layout_alignRight="@+id/btnTalla"
+        android:layout_alignEnd="@+id/btnTalla"
+        android:layout_alignLeft="@+id/txtTalla"
+        android:layout_alignStart="@+id/txtTalla" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtNPV"
+        android:layout_below="@+id/textView2"
+        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignStart="@+id/textView1"
+        android:layout_alignRight="@+id/textView2"
+        android:layout_alignEnd="@+id/textView2"
+        android:inputType="number" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EJECUTAR"
+        android:id="@+id/btnEjecutar"
+        android:layout_below="@+id/txtNPV"
+        android:layout_alignLeft="@+id/txtNPV"
+        android:layout_alignStart="@+id/txtNPV"
+        android:layout_alignRight="@+id/btnTalla"
+        android:layout_alignEnd="@+id/btnTalla"
+        android:onClick="mostrarDatos" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:ems="10"
+        android:id="@+id/txtResultado"
+        android:layout_below="@+id/btnEjecutar"
+        android:layout_alignLeft="@+id/btnEjecutar"
+        android:layout_alignStart="@+id/btnEjecutar"
+        android:layout_alignRight="@+id/btnEjecutar"
+        android:layout_alignEnd="@+id/btnEjecutar" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BUSCAR"
+        android:id="@+id/btnMarca"
+        android:layout_marginLeft="29dp"
+        android:layout_marginStart="29dp"
+        android:layout_alignTop="@+id/txtMarca"
+        android:layout_toRightOf="@+id/textView1"
+        android:onClick="BuscarMarca" />
+
+</RelativeLayout>
